@@ -10,4 +10,4 @@ message: str = f"Hello {name}, would you like to learn some Python today?"
 #2.4Name Cases: Use a variable to rapresent a person's name, 
 #and then print that person's name in lowercase, uppercase, and title case
 Name: str = "Federico"
-message: str = print
+
