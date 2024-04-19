@@ -199,7 +199,16 @@ print(f"toglierei la {Lista_Luoghi.pop(2)} ci sono già stato")
 #      Store their first name, last name, age, and the city in which they live. 
 #      You should have keys such as first_name, last_name, age, and city. 
 #      Print each piece of information stored in your dictionary.
-pass
+Persona = {
+    "Nome" : "John" ,
+    "Cognome" : "Frusciante" ,
+    "Età" : "cinquantacinque" ,
+    "Nato a" : "New York",
+ }
+print ( "Nome:" , Persona["Nome"])
+print ( "Cognome:" , Persona["Cognome"])
+print ( "Età:" , Persona["Età"])
+print ( "Nato a:" , Persona["Nato a"])
 
 
 # 6-2. Favorite Numbers - Use a dictionary to store people’s favorite numbers. 
@@ -207,8 +216,15 @@ pass
 #      Think of a favorite number for each person, and store each as a value in your dictionary. 
 #      Print each person’s name and their favorite number. For even more fun, 
 #      poll a few friends and get some actual data for your program.
-pass
-
+Età_dei_componenti_della_band = {
+"Antony" : 61 ,
+"Flea" : 62 ,
+"Chad" : 63 ,
+"Frusciante" : 54 ,
+}
+for Persone , Età in
+Età_dei_componenti_della_band.Items():
+print(Persone + "la sua età è'", Età ")
 
 # 6-3. Glossary - A Python dictionary can be used to model an actual dictionary. 
 #      However, to avoid confusion, let’s call it a glossary:
