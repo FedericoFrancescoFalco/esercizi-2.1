@@ -181,8 +181,19 @@ print("stai invitando {} persone".format(num_invitati))
 #       For example, you could make a list of mountains, rivers, countries, 
 #       cities, languages, or anything else you’d like. Write a program that creates 
 #       a list containing these items and then uses each function introduced in this chapter at least once.
-pass
 
+
+print(Lista_Luoghi)
+Lista_Luoghi.sort()
+Lista_Luoghi.reverse()
+Numero_Luoghi = len(Lista_Luoghi)
+print(Lista_Luoghi)
+print(Numero_Luoghi)
+Lista_Luoghi.insert (len(Lista_Luoghi)//2, "Altare_della_Patria")
+print(Lista_Luoghi)
+Lista_Luoghi.remove("Partenone")
+Lista_Luoghi.append("Piazza_Navona")
+print(f"toglierei la {Lista_Luoghi.pop(2)} ci sono già stato")
 
 # 6-1. Person - Use a dictionary to store information about a person you know. 
 #      Store their first name, last name, age, and the city in which they live. 
