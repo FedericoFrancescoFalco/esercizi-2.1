@@ -60,6 +60,7 @@ print(messaggio_saluto.format(lista_amici[1]))
 print(messaggio_saluto.format(lista_amici[2]))
 
 
+
 # 3-3. Your Own List: Think of your favorite mode of transportation, 
 #      such as a motorcycle or a car, and make a list that stores several examples. 
 #      Use your list to print a series of statements about these items, such as 
