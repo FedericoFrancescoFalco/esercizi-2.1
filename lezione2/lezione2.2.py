@@ -222,9 +222,8 @@ Età_dei_componenti_della_band = {
 "Chad" : 63 ,
 "Frusciante" : 54 ,
 }
-for Persone , Età in
-Età_dei_componenti_della_band.Items():
-print(Persone + "la sua età è'", Età ")
+for Persone , Età in Età_dei_componenti_della_band.items():
+    print(Persone + "la sua età è'", Età)
 
 # 6-3. Glossary - A Python dictionary can be used to model an actual dictionary. 
 #      However, to avoid confusion, let’s call it a glossary:
