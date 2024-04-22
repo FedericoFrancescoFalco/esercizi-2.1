@@ -234,22 +234,44 @@ for Persone , Età in Età_dei_componenti_della_band.items():
 #        You might print the word followed by a colon and then its meaning, 
 #        or print the word on one line and then print its meaning indented on a second line. 
 #      Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
-pass
 
+Dizionario_1 = {"Append": "Inserisce una variabile a fine della lista"}
+Dizionario_2 = {"Remove": "Cancella una variabile nella lista in un ordine casuale"}
+Dizionario_3 = {"Len": "Indica quanti elementi ci sono numericamente nella lista"}
+Dizionario_4 = {"Sort": "Indicizza in ordine alfabetico tutti gli elementi della lista"}
+Dizionario_5 = {"Reverse": "Sistema la lista in ordine inverso"}
+Lista_parole: list = [Dizionario_1, Dizionario_2, Dizionario_3, Dizionario_4, Dizionario_5]
+
+for dizionario in Lista_parole:
+    for k, v in dizionario.items():
+        print(f"{k}\n{v}")
+    print("")
 
 # 6-7. People - Start with the program you wrote for Exercise 6-1. 
 #      Make two new dictionaries representing different people, and store all three 
 #      dictionaries in a list called people. Loop through your list of people. 
 #      As you loop through the list, print everything you know about each person.
-pass
+Persona_1 = {"Nome" : "Mike" ,"Cognome" : "Patton" ,"Età" : "cinquantacinque" ,"Nato a" : "Eureka"}
+Persona_2 = {"Nome" : "James" ,"Cognome" : "Hetfield" ,"Età" : "sessantuno" ,"Nato a" : "San Francisco"}
 
+gente = [Persona_1, Persona_2]
+print(gente)
 
 # 6-8. Pets - Make several dictionaries, where each dictionary represents a different pet. 
 #      In each dictionary, include the kind of animal and the owner’s name. 
 #      Store these dictionaries in a list called pets. Next, loop through your list and as
 #      you do, print everything you know about each pet. 
-pass
+Specie = {"Pet_1": "Gatto", "Pet_2": "Cane", "Pet_3": "Iguana"}
+Proprietario = {"Pet_1": "Vincenzo", "Pet_2": "Sharon", "Pet_3": "Vladimiro"}
 
+Pet_1 = {"Pet_1":Specie["Pet_1"], "Per_1":Proprietario["Pet_1"]}
+Pet_2 = {"Pet_2":Specie["Pet_2"],"Per_2":Proprietario["Pet_2"]}
+Pet_3 = {"Pet_3":Specie["Pet_3"],"Per_2":Proprietario["Pet_3"]}
+
+Pets: list = [Pet_1, Pet_2, Pet_3]
+for dizionario in Pets:
+    for k, v in dizionario.items():
+        print(f"{k}\n{v}") 
 
 # 6-9. Favorite Places - Make a dictionary called favorite_places. 
 #      Think of three names to use as keys in the dictionary, and store one to three 
