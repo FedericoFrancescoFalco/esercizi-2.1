@@ -278,12 +278,13 @@ for dizionario in Pets:
 #      favorite places for each person. To make this exercise a bit more interesting, 
 #      ask some friends to name a few of their favorite places. 
 #      Loop through the dictionary, and print each person’s name and their favorite places.
-pass
+Luoghi_villeggiatura = {"Piazza_San_Marco": "Marco", "Vaticano" : "Daniele", "Piazza_di_Spagna": "Giuseppe"}
+print(Luoghi_villeggiatura)
 
 
 # 6-10. Favorite Numbers - Modify your program from Exercise 6-2 so each person can have 
 #       more than one favorite number. Then print each person’s name along with their favorite numbers.
-pass
+
 
 
 # 6-11. Cities - Make a dictionary called cities. Use the names of three cities as keys in your dictionary. 
@@ -291,11 +292,33 @@ pass
 #       its approximate population, and one fact about that city. The keys for each city’s dictionary should 
 #       be something like country, population, and fact. Print the name of each city and all of the 
 #       information you have stored about it.
-pass
+cities = { "New York": { "country": "United States", "population": "8.3 million", "fact": "New York City is home to the largest Polish population outside of Poland." }, 
+          "Paris": { "country": "France", "population": "2.1 million", "fact": "The Eiffel Tower was originally intended for Barcelona, Spain, but the project was rejected and moved to Paris." }, 
+          "Tokyo": { "country": "Japan", "population": "13.5 million", "fact": "Tokyo is the most populous metropolitan area in the world." } }
+
+for city, city_info in cities.items(): print("\nCity:", city) 
+print("Country:", city_info["country"]) 
+print("Population:", city_info["population"]) 
+print("Fact:", city_info["fact"])
 
 
 # 6-12. Extensions - We’re now working with examples that are complex enough that they can be 
 #       extended in any number of ways. Use one of the example programs from this chapter, 
 #       and extend it by adding new keys and values, changing the context of the program, 
 #       or improving the formatting of the output.
-pass
+# Create a dictionary of items and their prices
+items = {
+    'mela': 0.99,
+    'banana': 0.59,
+    'arancia': 0.79,
+    'uva': 2.99,
+    'melone': 4.99
+}
+
+print("Items and their prices:")
+for item, price in items.items():
+    print(f"{item.capitalize()}: €{price}")
+
+total_cost = sum(items.values())
+print(f"\nTotal cost of all items: €{total_cost}")
+
