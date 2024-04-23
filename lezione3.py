@@ -317,9 +317,28 @@ else:
     print("Elder")
 
 
-#5-7. Favorite Fruit: Make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list.
+#5-7. Favorite Fruit: Make a list of your favorite fruits, 
+# and then write a series of independent if statements that check for certain fruits in your list.
 # Make a list of your three favorite fruits and call it favorite_fruits.
-# Write five if statements. Each should check whether a certain kind of fruit is in your list. If the fruit is in your list, the if block should print a statement, such as You really like Apples!
+# Write five if statements. Each should check whether a certain kind of fruit is in your list. 
+# If the fruit is in your list, the if block should print a statement, such as You really like Apples!
+Elenco_Frutta = ["Fragola", "Banana", "Ananas", "Cocomero", "Mela"]
+if "Fragola" in Elenco_Frutta:
+    print("La Fragola è presente")
+else:
+    print("La Fragola non c'è")
+if "Banana" in Elenco_Frutta:
+    print("La banana è la tua frutta preferita?")
+if "Ananas" in Elenco_Frutta:
+    print("L'ananas è la tua frutta preferita?")
+if "Cocomero" in Elenco_Frutta:
+    print("Il cocomero è la tua frutta preferita?")
+if "Mela" in Elenco_Frutta:
+    print("La mela è la tua frutta preferita?")
+
+
+
+
 
 #5-8. Hello Admin: Make a list of five or more usernames, including the name 'admin'. 
 #Imagine you are writing code that will print a greeting to each user after they log in to a website. 
