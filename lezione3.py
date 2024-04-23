@@ -127,21 +127,21 @@ print("Gli ultimi tre elementi nella lista sono:", multipli_di_3[-3:])
 # Lista originale delle pizze
 mie_pizze = ["Margherita", "Capricciosa", "Diavola"]
 
-# Facciamo una copia della lista
+# ottengo una copia della lista
 pizze_amico = mie_pizze[:]
 
-# Aggiungiamo una nuova pizza alla lista originale
+# Aggiungo una nuova pizza alla lista originale
 mie_pizze.append("Quattro_formaggi")
 
-# Aggiungiamo una pizza diversa alla lista dell'amico
+# Aggiungo una pizza diversa alla lista dell'amico
 pizze_amico.append("Marinara")
 
-# Stampiamo le mie pizze preferite
+# Stampo le mie pizze preferite
 print("Le mie pizze preferite sono:")
 for pizza in mie_pizze:
     print(pizza)
 
-# Stampiamo le pizze preferite dell'amico
+# Stampo le pizze preferite dell'amico
 print("\nLe pizze preferite dell'amico sono:")
 for pizza in pizze_amico:
     print(pizza)
@@ -156,12 +156,12 @@ miei_piatti = ["pizza", "pasta", "bistecca"]
 # Lista delle pietanze preferite dell'amico
 piatti_amico = ["hamburger", "patatine fritte", "gelato"]
 
-# Stampiamo le mie pietanze preferite con un ciclo for
+# Stampo le mie pietanze preferite con un ciclo for
 print("Le mie pietanze preferite sono:")
 for cibo in miei_piatti:
     print(cibo)
 
-# Stampiamo le pietanze preferite dell'amico con un ciclo for
+# Stampo le pietanze preferite dell'amico con un ciclo for
 print("\nLe pietanze preferite dell'amico sono:")
 for cibo in piatti_amico:
     print(cibo)
