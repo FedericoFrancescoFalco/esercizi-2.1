@@ -262,6 +262,9 @@ else:
 #If it is, print a message that the player just earned 5 points.
 # Write one version of this program that passes the if test and another that fails. 
 #(The version that fails will have no output.)
+Alien_Color = ["green"]
+if Alien_Color == "green":
+    print("il giocatore ha guadagnato 5 punti")
 
 
 
@@ -269,6 +272,11 @@ else:
 # If the alien’s color is green, print a statement that the player just earned 5 points for shooting the alien.
 # If the alien’s color isn’t green, print a statement that the player just earned 10 points.
 # Write one version of this program that runs the if block and another that runs the else block.
+Alien_Color = ["green"]
+if Alien_Color == "green":
+    print("il giocatore ha guadagnato 5 punti")
+else:
+    print("il giocatore ha guadagnato 10 punti")
 
 #5-5. Alien Colors #3: Turn your if-else chain from Exercise 5-4 into an if-elif-else chain.
 
