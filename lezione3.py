@@ -262,7 +262,7 @@ else:
 #If it is, print a message that the player just earned 5 points.
 # Write one version of this program that passes the if test and another that fails. 
 #(The version that fails will have no output.)
-Alien_Color = ["green"]
+Alien_Color = "green"
 if Alien_Color == "green":
     print("il giocatore ha guadagnato 5 punti")
 
@@ -272,7 +272,7 @@ if Alien_Color == "green":
 # If the alien’s color is green, print a statement that the player just earned 5 points for shooting the alien.
 # If the alien’s color isn’t green, print a statement that the player just earned 10 points.
 # Write one version of this program that runs the if block and another that runs the else block.
-Alien_Color = ["green"]
+Alien_Color = "green"
 if Alien_Color == "green":
     print("il giocatore ha guadagnato 5 punti")
 else:
@@ -284,6 +284,13 @@ else:
 # If the alien is yellow, print a message that the player earned 10 points.
 # If the alien is red, print a message that the player earned 15 points.
 # Write three versions of this program, making sure each message is printed for the appropriate color alien.
+Alien_Color = "green"
+if Alien_Color == "green":
+    print("il giocatore ha guadagnato 5 punti")
+elif Alien_Color == "yellow":
+    print("il giocatore ha guadagnato 10 punti")
+else:
+    print("il giocatore ha guadagnato 15 punti")
 
 
 #5-6. Stages of Life: Write an if-elif-else chain that determines a person’s stage of life.
@@ -294,6 +301,21 @@ else:
 #If the person is at least 13 years old but less than 20, print a message that the person is a teenager.
 # If the person is at least 20 years old but less than 65, print a message that the person is an adult.
 # If the person is age 65 or older, print a message that the person is an elder.
+age: int = 21
+
+if age <2:
+    print("Baby/n")
+elif age < 4:
+    print("Toddler\n")
+elif age < 13:
+    print("Kid\n")
+elif age < 20:
+    print("Teenager\n")
+elif age < 65:
+    print("Adult\n")
+else:
+    print("Elder")
+
 
 #5-7. Favorite Fruit: Make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list.
 # Make a list of your three favorite fruits and call it favorite_fruits.
