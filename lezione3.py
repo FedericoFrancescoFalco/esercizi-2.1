@@ -210,6 +210,15 @@ for cibo in piatti_amico:
 # Create at least 10 tests. Have at least 5 tests evaluate to True and another
 #5 tests evaluate to False.
 
+numero = 5
+print("Il numero è == 5? Predico True")
+print( numero == 5)
+
+numero = 5
+print("Il numero è == 4? Predico False")
+print( numero == 5)
+
+
 #5-2. More Conditional Tests: You don’t have to limit the number of tests you cre-
 #ate to 10. If you want to try more comparisons, write more tests and add them
 #to conditional_tests.py. Have at least one True and one False result for each of
@@ -222,12 +231,38 @@ for cibo in piatti_amico:
 # Test whether an item is in a list
 # Test whether an item is not in a list
 
+stringa_uno = "rosso"
+stringa_due = "giallo"
+if stringa_uno == stringa_due:
+    print("la stringa è uguale")
+else:
+    print("la stringa non è uguale")
+
+stringa_uno = "rosso"
+stringa_due = "giallo"
+if stringa_uno.lower():
+    print("la parola è in minuscolo")
+else:
+    print("la parola non è in minuscolo")
+
+numero_x = 5
+numero_y = 4
+if numero_x > numero_y:
+    print("la comparazione è giusta")
+else:
+    print("la comparazione è sbagliata")
+
+
+
+    
+
 #5-3. Alien Colors #1: Imagine an alien was just shot down in a game.
 #Create a variable called alien_color and assign it a value of 'green', 'yellow', or 'red'.
 #• Write an if statement to test whether the alien’s color is green. 
 #If it is, print a message that the player just earned 5 points.
 # Write one version of this program that passes the if test and another that fails. 
 #(The version that fails will have no output.)
+
 
 
 #5-4. Alien Colors #2: Choose a color for an alien as you did in Exercise 5-3, and write an if-else chain.
@@ -269,7 +304,7 @@ for cibo in piatti_amico:
 
 #5-10. Checking Usernames: Do the following to create a program that simulates how websites ensure that everyone has a unique username.
 #• Make a list of five or more usernames called current_users.
-•# Make another list of five usernames called new_users. Make sure one or two of the new usernames are also in the current_users list.
+# Make another list of five usernames called new_users. Make sure one or two of the new usernames are also in the current_users list.
 # Loop through the new_users list to see if each new username has already been used. If it has, print a message that the person will need to enter a new username. If a username has not been used, print a message saying that the username is available.
 # Make sure your comparison is case insensitive. If 'John' has been used, 'JOHN' should not be accepted. (To do this, you’ll need to make a copy of current_users containing the lowercase versions of all existing users.)
 
