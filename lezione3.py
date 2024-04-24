@@ -327,6 +327,7 @@ if "Fragola" in Elenco_Frutta:
     print("La Fragola è presente")
 else:
     print("La Fragola non c'è")
+#seconda parte dell'esercizio
 if "Banana" in Elenco_Frutta:
     print("La banana è la tua frutta preferita?")
 if "Ananas" in Elenco_Frutta:
@@ -338,13 +339,13 @@ if "Mela" in Elenco_Frutta:
 
 
 
-
-
 #5-8. Hello Admin: Make a list of five or more usernames, including the name 'admin'. 
 #Imagine you are writing code that will print a greeting to each user after they log in to a website. 
 #Loop through the list, and print a greeting to each user.
 # If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report?
 # Otherwise, print a generic greeting, such as Hello Jaden, thank you for logging in again.
+
+
 
 
 #5-9. No Users: Add an if test to hello_admin.py to make sure the list of users is not empty.
