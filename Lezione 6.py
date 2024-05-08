@@ -5,6 +5,10 @@ class Person:
         self.name: str = name
         self.surname: str = surname
         self.ssn: str = ssn
+        self.birth_date: str = "31/7/1985"
+        self.birth_place: str = "Rome"
+        self.gender: str = "Male"
+        self.ssn : str = self.compute.ssn()
     def get_name(self):
 
         return self.name
@@ -22,6 +26,19 @@ class Person:
 
         self.ssn = ssn
         raise Exception("You cannot modify!")
+
+def get_ssn(self):
+    return self.ssn
+
+def set_ssn(self, ssn: str):
+
+
+
+    self.ssn = ssn
+
+def compute_ssn(self) -> bool:
+    first_three_name_char = self.name[:3]
+    first_three_name_char = self.surname[:3]
 
 
 person_1: Person = Person(name = "Federico", surname = "Falco", ssn = "FLC")
