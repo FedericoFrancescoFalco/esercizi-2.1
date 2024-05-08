@@ -16,6 +16,12 @@ class Person:
     def get_ssn(self):
 
         return self.ssn
+    
+    def set_ssn(self, ssn: str) -> None:
+
+
+        self.ssn = ssn
+        raise Exception("You cannot modify!")
 
 
 person_1: Person = Person(name = "Federico", surname = "Falco", ssn = "FLC")
