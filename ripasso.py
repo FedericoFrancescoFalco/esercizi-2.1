@@ -130,3 +130,32 @@ def calcola_stipendio(ore_lavorate: int) -> float:
         stipendio_40 = 40 * 10
         stipendio = stipendio_40 + stipendio_extra
     return stipendio    
+
+
+#6?
+def hypotenuse(a : float, b : float) -> float:
+    return (a**2 + b**2) ** 0,5
+  
+lato1 = 3.0
+lato2 = 4.0
+
+ipotenusa = hypotenuse (lato1, lato2)
+
+print(ipotenusa)
+
+
+#1
+c.
+
+a) False, b) True, c) True, d) True
+
+#5
+
+def integerPower(base: int, exp: int) ->int:
+    i= exp
+    b= base
+    while i > 1:
+        base *= b
+        i -= 1
+    return base
+
