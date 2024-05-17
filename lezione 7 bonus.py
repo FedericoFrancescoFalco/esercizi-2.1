@@ -15,15 +15,9 @@ print("\n\n")
 
 
 
-
-
-
-
-
 #Write a function to calculate the factorial of a number given as input. The number should be returned as output. For example:
     #Input: 8
     #Output: 40320
-
 
 def factorial(n):
     if n == 0:
@@ -33,34 +27,28 @@ def factorial(n):
 
 num = int(input("Enter a number: "))
 print("Factorial of", num, "is", factorial(num))
-#'''
 print("\n\n")
 
 
-
-
-
-
-
-
-
-
-
- #Use the function implemented in Exercise 2 to compute all factorial numbers of a list of numbers. The list is given as input to the function. All factorials should be returned as output. For example:
+ #Use the function implemented in Exercise 2 to compute all factorial numbers of a list of numbers. The list is given as input to the function. 
+ #All factorials should be returned as output. For example:
 #Input: [2, 5, 8, 10]
 #Output: [2, 120, 40320, 3628800]
 
 
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
 
+def compute_factorials(numbers):
+    return [factorial(num) for num in numbers]
 
+numbers = [7, 14, 17, 21]
+print("Factorials of", numbers, "are", compute_factorials(numbers))
 
-
-
-
-
-
-
-
+print("\n\n")
 
 
 
@@ -70,6 +58,11 @@ print("\n\n")
 #Input: 8
 #Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
+def dictionary_numbers(n):
+    return {i: i*i for i in range(1, n+1)}
+
+n= 5
+print(dictionary_numbers(n))
 
 
 
@@ -81,14 +74,26 @@ print("\n\n")
 
 
 
-
-
-    #Write a function that accepts a string with a comma-separated sequence of words as input and prints the words as a comma-separated sequence after sorting them alphabetically. For example:
+#Write a function that accepts a string with a comma-separated sequence of words as input and prints the words as a comma-separated sequence after sorting them alphabetically. For example:
         #Input: without,hello,bag,world
         #Output: bag,hello,without,world
 
 
-    #Write a function that accepts a list of sentences (string) as input and returns each line as output after capitalising all sentence characters. For example:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Write a function that accepts a list of sentences (string) as input and returns each line as output after capitalising all sentence characters. For example:
         #Input: Practice makes perfect
         #Output: PRACTICE MAKES PERFECT
 

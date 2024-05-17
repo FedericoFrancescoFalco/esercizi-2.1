@@ -107,3 +107,26 @@ while contatore < len(lista):
 
 
 
+ #2
+
+ def transform(x: int) -> int:
+    if x % 2 == 0:
+        x /=2
+    else:
+        x*=3
+        x-=1
+    return x
+
+
+#3
+
+def calcola_stipendio(ore_lavorate: int) -> float:
+    if ore_lavorate <= 40:
+        stipendio = ore_lavorate *  10
+        
+    elif ore_lavorate > 40:
+        ore_extra = ore_lavorate - 40
+        stipendio_extra = ore_extra * 15
+        stipendio_40 = 40 * 10
+        stipendio = stipendio_40 + stipendio_extra
+    return stipendio    
