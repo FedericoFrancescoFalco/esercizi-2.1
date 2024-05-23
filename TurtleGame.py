@@ -18,57 +18,117 @@ def print_race(positions, hare_pos, tortoise_pos):
 
 #Le funzioni `tortoise_move()` e `hare_move()` determinano quanto la tartaruga e la lepre si spostano durante ogni turno della gara. All'interno di queste funzioni, viene generato un numero casuale tra 1 e 10. Questo numero rappresenta quanto velocemente la tartaruga o la lepre si muoverà.
 
-def tortoise_move():
+def tortoise_move(weather,energy):
     move = random.randint(1, 10)
+    if weather == "Pioggia":
+        move -= 1
     if move <= 5:
-        return 3
+        if energy >= 5:
+            energy -= 5
+            return 3, energy
+        else:
+            energy += 10
+            return 0, energy
     elif 6 <= move <= 7:
-        return -6
+        if energy >= 10:
+            energy -= 10
+            return -6, energy
+        else:
+            energy += 10
+            return 0, energy
     else:
-        return 1
+        if energy >= 3:
+            energy -= 3
+            return 1, energy
+        else:
+            energy *= 10
+            return 0, energy
 
-def hare_move():
+def hare_move(weather, energy):
     move = random.randint(1, 10)
+    if weather == "Pioggia":
+        move -= 2
     if move <= 2:
-        return 0
+        energy = min(100, energy + 10)
+        return 0, energy
     elif 3 <= move <= 4:
-        return 9
+        if energy >= 15:
+            energy -= 15
+            return 9, energy
+        else:
+            energy *= 10
+            return 0, energy
+
     elif 5 <= move <= 6:
-        return -12
+        if energy >= 20:
+            energy -= 20
+            return 12, energy
+        else:
+            energy *= 10
+            return 0, energy
+
     elif 7 <= move <= 9:
-        return 1
+        if energy >= 5:
+            energy -= 5
+            return 1, energy
+        else:
+            energy *= 10
+            return 0, energy
+
     else:
-        return -2
+        if energy >= 8:
+            energy -= 8
+            return 2, energy
+        else:
+            energy *= 10
+            return 0, energy
 
-#definisco una posizione iniziale tra la tartaruga e la lepre. utilizzo il ciclo il ciclo while true che prodeguirà finché non  interrotto dall' istruzione `break`. Le posizioni della lepre e della tartaruga vengono aggiornate ad ogni iterazione utilizzando le funzioni `hare_move()` e `tortoise_move()` , generate da un numero casuale. Con relativa verifica che le posizioni non siano mai inferiori a 1.
 
-def race():
-    hare_pos = 1
-    tortoise_pos = 1
-    print("BANG !!!!! AND THEY'RE OFF !!!!!")
-    while True:
-        hare_pos += hare_move()
-        tortoise_pos += tortoise_move()
-        
-        if hare_pos < 1:
-            hare_pos = 1
-        if tortoise_pos < 1:
-            tortoise_pos = 1
-   
-    #uso la funzione `print_race` per stampare la visualizzazione della gara. E una serie di verifiche per capire chi stia vincendo.        
+def change_weather(tick):
+
+    if tick % 10 == 0:
+        return random.choice(["Pioggia", "Soleggiato"])
+    else:
+        return None
+     
+hare_pos = 0
+tortoise_pos = 0
+hare_energy = 100
+tortoise_energy = 100
+
+tick = 0
+weather = "Soleggiato"
+
+
+print("BANG !!!!! AND THEY'RE OFF !!!!!")
+
+while True:
+    tick += 1
+    weather = change_weather(tick) or weather
+    hare_pos += hare_move()
+    tortoise_pos += tortoise_move()
+
+    hare_move_result, hare_energy = hare_move(weather,hare_energy)
+    hare_pos += hare_move_result
+    if hare_pos < 0:
+        hare_pos = 0
+
+    tortoise_move_result, tortoise_energy = tortoise_move(weather, tortoise_energy)
+    tortoise_pos += tortoise_move_result
+    if tortoise_pos < 0:
+        tortoise_pos = 0
                               
-        print_race(70, hare_pos, tortoise_pos)
+    print_race(70, hare_pos, tortoise_pos)
         
-        if hare_pos >= 70 and tortoise_pos >= 70:
-            print("IT'S A TIE.")
-            break
-        elif hare_pos >= 70:
-            print("HARE WINS || YUCH!!!")
-            break
-        elif tortoise_pos >= 70:
-            print("TORTOISE WINS! || VAY!!!")
-            break
+    if hare_pos >= 70 and tortoise_pos >= 70:
+        print("IT'S A TIE.")
+        break
+    elif hare_pos >= 70:
+        print("HARE WINS || YUCH!!!")
+        break
+    elif tortoise_pos >= 70:
+        print("TORTOISE WINS! || VAY!!!")
+        break
 
-race()
 
 #quando una delle condizioni di vittoria viene soddisfatto,il programma termina.
