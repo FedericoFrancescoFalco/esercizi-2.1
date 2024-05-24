@@ -65,5 +65,4 @@ cinema.aggiungi_sala(sala1)
 cinema.aggiungi_sala(sala2)
 
 
-
-
+print(cinema.prenota_film("Titanic",200))
