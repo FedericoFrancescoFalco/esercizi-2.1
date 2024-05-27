@@ -90,7 +90,14 @@ def change_weather(tick):
         return random.choice(["Pioggia", "Soleggiato"])
     else:
         return None
-     
+
+def apply_obstacles(position, obstacles):
+    if position in obstacles:
+        return position + obstacles[position]
+    return position
+
+print("BANG !!!!! AND THEY'RE OFF !!!!!")
+
 hare_pos = 0
 tortoise_pos = 0
 hare_energy = 100
@@ -99,25 +106,31 @@ tortoise_energy = 100
 tick = 0
 weather = "Soleggiato"
 
+obstacles = {15: -3, 30: -5, 45: -7}
+bounces = {10: 5, 25: 3, 50: 10}
 
-print("BANG !!!!! AND THEY'RE OFF !!!!!")
+
 
 while True:
     tick += 1
     weather = change_weather(tick) or weather
-    hare_pos += hare_move()
-    tortoise_pos += tortoise_move()
+
 
     hare_move_result, hare_energy = hare_move(weather,hare_energy)
     hare_pos += hare_move_result
     if hare_pos < 0:
         hare_pos = 0
+    hare_pos = apply_obstacles(hare_pos, obstacles)
+    hare_pos = apply_obstacles(hare_pos, bounces)    
 
     tortoise_move_result, tortoise_energy = tortoise_move(weather, tortoise_energy)
     tortoise_pos += tortoise_move_result
     if tortoise_pos < 0:
         tortoise_pos = 0
-                              
+    tortoise_pos = apply_obstacles(tortoise_pos, obstacles)
+    tortoise_pos = apply_obstacles(tortoise_pos, bounces)
+
+
     print_race(70, hare_pos, tortoise_pos)
         
     if hare_pos >= 70 and tortoise_pos >= 70:
