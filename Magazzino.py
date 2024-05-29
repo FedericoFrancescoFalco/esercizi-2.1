@@ -1,13 +1,12 @@
-
-#Scrivi un programma in Python che gestisca un magazzino. Il programma deve permettere di aggiungere prodotti al magazzino, cercare prodotti per nome e verificare la disponibilità di un prodotto.
-
-#Definisci una classe Prodotto con i seguenti attributi: nome (stringa)quantità (intero)Definisci una classe Magazzino con i seguenti metodi:aggiungi_prodotto(prodotto: Prodotto): aggiunge un prodotto al magazzino.cerca_prodotto(nome: str) -> Prodotto: cerca un prodotto per nome e lo ritorna se esiste.verifica_disponibilità(nome: str) -> str: verifica se un prodotto è disponibile in magazzino.
-
-
 class Prodotto:
-    def __init__(self, nome: str, quantità: int):
+    def __init__(self, nome: str, quantità: int, prezzo: float):
         self.nome: str = nome
         self.quantità: int = quantità
+        self.prezzo: float = prezzo
+
+    def __str__(self):
+        return f"{self.nome} - Quantità: {self.quantità}, Prezzo: {self.prezzo:.2f}€"
+
 
 class Magazzino:
     def __init__(self):
@@ -16,6 +15,7 @@ class Magazzino:
     def aggiungi_prodotto(self, prodotto: Prodotto):
         if prodotto.nome in self.prodotti:
             self.prodotti[prodotto.nome].quantità += prodotto.quantità
+            self.prodotti[prodotto.nome].prezzo = prodotto.prezzo 
         else:
             self.prodotti[prodotto.nome] = prodotto
         print(f"Prodotto {prodotto.nome} aggiunto al magazzino. Quantità attuale: {self.prodotti[prodotto.nome].quantità}")
@@ -23,7 +23,7 @@ class Magazzino:
     def cerca_prodotto(self, nome: str) -> Prodotto:
         prodotto = self.prodotti.get(nome, None)
         if prodotto:
-            print(f"Prodotto trovato: {prodotto.nome}, Quantità: {prodotto.quantità}")
+            print(f"Prodotto trovato: {prodotto}")
         else:
             print("Prodotto non trovato.")
         return prodotto
@@ -31,21 +31,20 @@ class Magazzino:
     def verifica_disponibilità(self, nome: str) -> str:
         prodotto = self.cerca_prodotto(nome)
         if prodotto and prodotto.quantità > 0:
-            return f"Il prodotto {nome} è disponibile. Quantità: {prodotto.quantità}"
+            return f"Il prodotto {nome} è disponibile. Quantità: {prodotto.quantità}, Prezzo: {prodotto.prezzo:.2f}€"
         else:
             return f"Il prodotto {nome} non è disponibile."
 
-# Esempio di utilizzo
-if __name__ == "__main__":
-    magazzino = Magazzino()
+# specifico il magazzino
+magazzino = Magazzino()
 
-    # Aggiungo prodotti al magazzino
-    magazzino.aggiungi_prodotto(Prodotto("Ananas", 50))
-    magazzino.aggiungi_prodotto(Prodotto("Fragole", 30))
+# aggiungo prodotti al magazzino
+magazzino.aggiungi_prodotto(Prodotto("Ananas", 50, 2.50))
+magazzino.aggiungi_prodotto(Prodotto("Fragole", 30, 3.00))
 
-    # Cerco un prodotto
-    magazzino.cerca_prodotto("Ananas")
+# Ricerco un un prodotto
+magazzino.cerca_prodotto("Ananas")
 
-    # Verifico la disponibilità di un prodotto
-    print(magazzino.verifica_disponibilità("Banana"))
-    print(magazzino.verifica_disponibilità("Arancia"))
+# Verifico la disponibilità di un prodotto
+print(magazzino.verifica_disponibilità("Banana"))
+print(magazzino.verifica_disponibilità("Arancia"))
