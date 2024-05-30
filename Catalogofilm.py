@@ -36,9 +36,9 @@ class MovieCatalog:
                 if not self.catalog[director_name]: 
                     del self.catalog[director_name]
             else:
-                print(f"Il film '{movie_name}' non è nella lista del regista '{director_name}'.")
+                print(f"Il film '{movie_name}' non è nella filmografia del regista '{director_name}'.")
         else:
-            print(f"Il regista '{director_name}' non esiste nel catalogo.")
+            print(f"Il regista '{director_name}' non è nel catalogo.")
 
     def list_directors(self):
         
@@ -49,7 +49,7 @@ class MovieCatalog:
         if director_name in self.catalog:
             return self.catalog[director_name]
         else:
-            return f"Il regista '{director_name}' non esiste nel catalogo."
+            return f"Il regista '{director_name}' non è nel catalogo."
 
     def search_movies_by_title(self, title):
         
@@ -61,7 +61,7 @@ class MovieCatalog:
         if result:
             return result
         else:
-            return f"Nessun film trovato con la parola '{title}' nel titolo."
+            return f"Nessun film trovato con la frase '{title}' nel titolo."
 
 
 catalogo = MovieCatalog()
